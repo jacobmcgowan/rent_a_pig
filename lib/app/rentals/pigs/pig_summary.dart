@@ -1,19 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:rent_a_pig/shared/models/pig.dart';
 
+/// Display the information about a pig for rent.
 class PigSummary extends StatefulWidget {
+  /// The pig to display.
   final Pig pig;
 
+  /// Creates a PigSummary.
   PigSummary({Key key, this.pig}) : super(key: key);
 
+
   @override
-  PigSummaryState createState() {
-    return new PigSummaryState();
+  _PigSummaryState createState() {
+    return new _PigSummaryState();
   }
 }
 
 
-class PigSummaryState extends State<PigSummary> {
+/// Handles the logic and internal state of a PigSummary.
+class _PigSummaryState extends State<PigSummary> {
   bool _rented = false;
 
   @override
@@ -34,7 +39,8 @@ class PigSummaryState extends State<PigSummary> {
               children: <Widget>[
                 FlatButton(
                   child: Text('Rent for \$${widget.pig.price}'),
-                  onPressed: _rented ? null : () => _rent(context), // setting onPressed to null disables the button
+                  // setting onPressed to null disables the button.
+                  onPressed: _rented ? null : () => _rent(context),
                 )
               ],
             ),

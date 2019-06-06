@@ -3,15 +3,18 @@ import 'package:rent_a_pig/app/rentals/pigs.dart';
 import 'package:rent_a_pig/shared/models.dart';
 import 'package:rent_a_pig/shared/services.dart';
 
+/// Displays the list of pigs that are available for a job.
 class PigsScreen extends StatefulWidget {
+  /// The job to find pigs for.
   final String job;
 
+  /// Creates a PigsScreen.
   PigsScreen({Key key, this.job}) : super(key: key);
 
 
   @override
-  PigsScreenState createState() {
-    return new PigsScreenState(
+  _PigsScreenState createState() {
+    return new _PigsScreenState(
       job: job,
       title: job == null ? 'All Pigs' : 'Pigs for ' + job,
       pigs: PigsService.getPigs(job)
@@ -19,12 +22,20 @@ class PigsScreen extends StatefulWidget {
   }
 }
 
-class PigsScreenState extends State<PigsScreen> {
+
+/// Handles the logic and internal state of a PigsScreen.
+class _PigsScreenState extends State<PigsScreen> {
+  /// The job to find pigs for.
   final String job;
+
+  /// The title to display in the AppBar.
   final String title;
+
+  /// The list of pigs to display.
   final List<Pig> pigs;
 
-  PigsScreenState({this.job, this.title, this.pigs});
+  /// Creates a _PigsScreenState.
+  _PigsScreenState({this.job, this.title, this.pigs});
 
 
   @override
