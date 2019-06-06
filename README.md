@@ -8,11 +8,11 @@ Example application used to demonstrate Flutter.
 [get started documentation](https://flutter.dev/docs/get-started/install).
 2. Start you Android or iOS VM.
 3. Run the app using one of the following options:
-  1. In Visual Studio Code press F5 to start debugging.
-  2. If using another IDE, check the
-  [editor setup documentation](https://flutter.dev/docs/get-started/editor?tab=androidstudio)
-  and configure your debugger to start *lib/main_dev.dart* instead of *lib/main.dart*.
-  3. Open a terminal and run `flutter run lib/main_dev.dart`.
+    1. In Visual Studio Code press F5 to start debugging.
+    2. If using another IDE, check the
+    [editor setup documentation](https://flutter.dev/docs/get-started/editor?tab=androidstudio)
+    and configure your debugger to start *lib/main_dev.dart* instead of *lib/main.dart*.
+    3. Open a terminal and run `flutter run lib/main_dev.dart`.
 
 A few resources to get you started if this is your first Flutter project:
 
